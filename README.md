@@ -17,6 +17,7 @@ Create a bot to download videos from Instagram, TikTok, and Reddit, then upload 
 ### API Integration
 
 1. Get Upload URL (METHOD: GET):
+2. For Flic-Token access, message on [Telegram](https://t.me/+vKzmXhW1Epw0Mzll) with your Empowerverse username.
 ```
 Endpoint: https://api.socialverseapp.com/posts/generate-upload-url
 Headers: {
