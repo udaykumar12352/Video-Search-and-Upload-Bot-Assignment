@@ -16,7 +16,7 @@ Create a bot to download videos from Instagram, TikTok, and Reddit, then upload 
 
 ### API Integration
 
-1. Get Upload URL:
+1. Get Upload URL (METHOD: GET):
 ```
 Endpoint: https://api.socialverseapp.com/posts/generate-upload-url
 Headers: {
@@ -25,10 +25,10 @@ Headers: {
 }
 ```
 
-2. Upload Video:
+2. Upload Video (METHOD: PUT):
 - Use pre-signed URL with PUT request
 
-3. Create Post:
+3. Create Post (METHOD: POST):
 ```
 Endpoint: https://api.socialverseapp.com/posts
 Headers: {
