@@ -1,109 +1,61 @@
-# 🎥 Video Search and Upload Bot Assignment
+# 🎥 Video Search and Upload Bot
 
-A Python-based bot that searches, downloads, and uploads videos from social media platforms.
+A Python-based bot to search, download, and upload videos from social media platforms such as Instagram, TikTok, and Reddit. The bot integrates with Empowerverse's API to upload videos to the Super Feed category.
 
-## 🎯 Objective
-Create a bot to download videos from Instagram, TikTok, and Reddit, then upload them to our server using provided APIs.
+---
 
-## 📋 Requirements
+## 📋 Project Description
 
-### Core Features
-- Search and download videos from specified platforms
-- Upload videos via API endpoints
-- Auto-delete local files after upload
-- Monitor /videos directory for new .mp4 files
-- Async operations for concurrent uploads
+This bot automates the process of:
+1. Searching and downloading videos from specified platforms.
+2. Uploading videos to a server using provided API endpoints.
+3. Monitoring a directory (`/videos`) for new `.mp4` files and processing them automatically.
 
-### API Integration
+Key features:
+- Async operations for concurrent uploads.
+- Auto-deletion of local files after upload.
+- Comprehensive error handling and retry mechanisms.
 
-1. Get Upload URL (METHOD: GET):
-2. For Flic-Token access, message on [Telegram](https://t.me/+vKzmXhW1Epw0Mzll) with your Empowerverse username.
-```
-Endpoint: https://api.socialverseapp.com/posts/generate-upload-url
-Headers: {
-    "Flic-Token": "<YOUR_TOKEN>",
-    "Content-Type": "application/json"
-}
-```
+---
 
-2. Upload Video (METHOD: PUT):
-- Use pre-signed URL with PUT request
+## 🚀 Setup Instructions
 
-3. Create Post (METHOD: POST):
-```
-Endpoint: https://api.socialverseapp.com/posts
-Headers: {
-    "Flic-Token": "<YOUR_TOKEN>",
-    "Content-Type": "application/json"
-}
-Body: {
-    "title": "<video title>",
-    "hash": "<hash from Step 1>",
-    "is_available_in_public_feed": false,
-    "category_id": <category_id>
-}
-```
+### Prerequisites
+- Python 3.8 or above
+- `pip` (Python package manager)
+- Internet connection
 
-### Technical Requirements
-- Python
-- asyncio for concurrent operations
-- tqdm for progress bars
-- Error handling
-- Directory monitoring
-
-## 📁 Basic Project Structure
-```
-video-bot/
-├── main.py                # Main script
-├── requirements.txt       # Dependencies
-└── README.md             # Documentation
-```
-
-## 📝 Submission Guidelines
-
-### Code Repository
-- Complete GitHub repository
-- Clear documentation
-- Proper code structure
-- Detailed README.md
-
-### Video Presentation (5 min max)
-- Project setup instructions
-- Code walkthrough
-- Self-introduction
-- Submit via Internshalla/Google Drive
-
-## 📊 Evaluation Criteria
-
-### Code Quality (30%)
-- Organization and structure
-- Readability
-- Performance optimization
-- Best practices implementation
-
-### Functionality (40%)
-- Video search implementation
-- Upload mechanism
-- Error handling
-- Feature completeness
-
-### Documentation (15%)
-- Setup instructions
-- Usage guidelines
-- Code comments
-- README quality
-
-### Presentation (15%)
-- Clear explanation
-- Technical understanding
-- Time management
-
-## ✅ Verification
-1. Download Empowerverse App ([Android](https://play.google.com/store/apps/details?id=com.empowerverse.app) | [iOS](https://apps.apple.com/us/app/empowerverse/id6449552284))
-2. Navigate to "Super Feed" category
-3. Hold category and click Browse
-4. Check uploaded videos
-
-For Flic-Token access, message on [Telegram](https://t.me/+vKzmXhW1Epw0Mzll) with your Empowerverse username.
-
-Results will be announced within 24 hours of submission.
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/<your-username>/video-bot.git
+   cd video-bot
+2.Install dependencies:
+    pip install -r requirements.txt
+3.Set up your Flic-Token:
+    Obtain your token by messaging the Empowerverse Telegram bot with your username.
+▶️ How to Run the Bot
+1.Run the bot:
+    python main.py
+2.Follow the on-screen prompts to:
+    Search for videos on specified platforms.
+    Monitor the /videos directory for .mp4 files.
+    Automatically upload videos to the Super Feed.
+📖 Usage Guidelines
+Testing Features
+    1.Search and Download:
+        Provide a valid URL from Instagram, TikTok, or Reddit.
+        Verify the video is downloaded to the /videos directory.
+    2.Upload Videos:
+        Place an .mp4 file in the /videos directory.
+        Confirm the bot uploads it using the Empowerverse API.
+    3.Super Feed Verification:
+        Open the Empowerverse app and navigate to the Super Feed category.
+        Verify the uploaded video is visible.
+🤝 Contribution
+Feel free to fork the repository, create a new branch, and submit a pull request for any improvements or fixes.
+📞 Support
+    For issues or questions, please contact:
+        Email:udaykumarvakacharla@gmail.com
+📜 License
+    This project is licensed under the MIT License. See the LICENSE file for details.
